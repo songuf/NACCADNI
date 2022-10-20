@@ -1,0 +1,60 @@
+---
+title: "Intro"
+output: rmarkdown::html_vignette
+  keep_md: true
+vignette: >
+  %\VignetteIndexEntry{Intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(NACCADNI)
+library(tidyverse)
+```
+
+##### Download the model
+
+make sure name the end of path with `.rds`
+
+```{r, eval=FALSE}
+download_model("model.rds")
+```
+
+##### Load the model into the R environment
+
+```{r, eval=FALSE}
+mod <- load_model("model.rds")
+```
+
+```{r, echo=FALSE}
+mod <- readRDS("../model/model.rds")
+```
+
+##### Make prediction on the data
+
+```{r}
+data("tinydat")
+pred <- predict_model(mod, tinydat)
+```
+
+
+##### Exctract the survival probability table  
+
+```{r}
+tab <- survProb_predict(pred)
+tab
+```
+
+##### Plot the survival curves 
+
+```{r}
+plot_survProb(tab)
+```
