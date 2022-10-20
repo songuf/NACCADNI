@@ -18,7 +18,8 @@ predicted object
 Make prediction on the new dataset
 }
 \examples{
-test.pred <- predict_model(mod, dat)
+data(tinydat)
+test.pred <- predict_model(mod, tinydat)
 }
 \author{
 Shangchen Song

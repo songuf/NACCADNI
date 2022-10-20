@@ -48,7 +48,8 @@ load_model <- function(path){
 ##' @author Shangchen Song
 ##' @export
 ##' @examples
-##' test.pred <- predict_model(mod, dat)
+##' data(tinydat)
+##' test.pred <- predict_model(mod, tinydat)
 predict_model <- function(model, newdata){
   predict(model, newdata)
 }
