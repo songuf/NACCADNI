@@ -17,10 +17,11 @@ devtools::install_github("lovestat/NACCADNI")
 
 ##### Download the model
 
-make sure name the end of path with `.rds`
+make sure that the end of path was name with `.rds`
 
 ``` r
 library(NACCADNI)
+library(tidyverse)
 download_model("model.rds")
 ```
 
