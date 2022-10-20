@@ -17,7 +17,7 @@ devtools::install_github("lovestat/NACCADNI")
 
 ##### Download the model
 
-make sure that the end of path was name with `.rds`
+make sure that the end of path was named with `.rds`
 
 ``` r
 library(NACCADNI)
