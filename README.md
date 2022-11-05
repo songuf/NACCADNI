@@ -4,6 +4,8 @@
 
 Delivering prediction models for NACC and ADNI registered cohort
 
+A compact version of the model using less trees can be accessed on https://shangchensong.shinyapps.io/NACC-ADNI-shiny
+
 ## Installation
 
 ``` r
